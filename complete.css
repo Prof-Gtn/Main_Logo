@@ -1,0 +1,172 @@
+/* GENERATIVE TECH - COMPLETE BRAND SYSTEM */
+
+/* 1. COLOR SYSTEM */
+:root {
+    /* PRIMARY PALETTE */
+    --gt-primary-50: #f5f3ff;
+    --gt-primary-100: #ede9fe;
+    --gt-primary-200: #ddd6fe;
+    --gt-primary-300: #c4b5fd;
+    --gt-primary-400: #a78bfa;
+    --gt-primary-500: #8b5cf6;
+    --gt-primary-600: #7c3aed;
+    --gt-primary-700: #6d28d9;
+    --gt-primary-800: #5b21b6;
+    --gt-primary-900: #4c1d95;
+    
+    /* SECONDARY PALETTE */
+    --gt-blue-50: #eff6ff;
+    --gt-blue-100: #dbeafe;
+    --gt-blue-200: #bfdbfe;
+    --gt-blue-300: #93c5fd;
+    --gt-blue-400: #60a5fa;
+    --gt-blue-500: #3b82f6;
+    --gt-blue-600: #2563eb;
+    --gt-blue-700: #1d4ed8;
+    --gt-blue-800: #1e40af;
+    --gt-blue-900: #1e3a8a;
+    
+    /* NEUTRAL PALETTE */
+    --gt-gray-50: #f8fafc;
+    --gt-gray-100: #f1f5f9;
+    --gt-gray-200: #e2e8f0;
+    --gt-gray-300: #cbd5e1;
+    --gt-gray-400: #94a3b8;
+    --gt-gray-500: #64748b;
+    --gt-gray-600: #475569;
+    --gt-gray-700: #334155;
+    --gt-gray-800: #1e293b;
+    --gt-gray-900: #0f172a;
+    
+    /* GRADIENTS */
+    --gt-gradient-primary: linear-gradient(135deg, var(--gt-primary-500) 0%, var(--gt-blue-500) 100%);
+    --gt-gradient-secondary: linear-gradient(135deg, var(--gt-primary-400) 0%, var(--gt-blue-400) 100%);
+    --gt-gradient-dark: linear-gradient(135deg, var(--gt-primary-700) 0%, var(--gt-blue-700) 100%);
+    --gt-gradient-light: linear-gradient(135deg, var(--gt-primary-200) 0%, var(--gt-blue-200) 100%);
+    
+    /* SHADOWS */
+    --gt-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --gt-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --gt-shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --gt-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --gt-shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --gt-shadow-glow: 0 0 40px rgba(139, 92, 246, 0.3);
+}
+
+/* 2. TYPOGRAPHY SYSTEM */
+:root {
+    --gt-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --gt-font-mono: 'JetBrains Mono', 'Monaco', 'Courier New', monospace;
+    
+    /* TYPE SCALE */
+    --gt-text-xs: 0.75rem;   /* 12px */
+    --gt-text-sm: 0.875rem;  /* 14px */
+    --gt-text-base: 1rem;    /* 16px */
+    --gt-text-lg: 1.125rem;  /* 18px */
+    --gt-text-xl: 1.25rem;   /* 20px */
+    --gt-text-2xl: 1.5rem;   /* 24px */
+    --gt-text-3xl: 1.875rem; /* 30px */
+    --gt-text-4xl: 2.25rem;  /* 36px */
+    --gt-text-5xl: 3rem;     /* 48px */
+    --gt-text-6xl: 3.75rem;  /* 60px */
+    --gt-text-7xl: 4.5rem;   /* 72px */
+    
+    /* FONT WEIGHTS */
+    --gt-thin: 100;
+    --gt-extralight: 200;
+    --gt-light: 300;
+    --gt-regular: 400;
+    --gt-medium: 500;
+    --gt-semibold: 600;
+    --gt-bold: 700;
+    --gt-extrabold: 800;
+    --gt-black: 900;
+}
+
+/* 3. LOGO USAGE CLASSES */
+.gt-logo {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.gt-logo-sm {
+    transform: scale(0.75);
+}
+
+.gt-logo-lg {
+    transform: scale(1.25);
+}
+
+.gt-logo-inline {
+    flex-direction: row;
+    gap: 16px;
+}
+
+.gt-logo-dark {
+    .company-name {
+        color: white;
+    }
+    .company-tagline {
+        color: var(--gt-gray-400);
+    }
+}
+
+/* 4. UTILITY CLASSES */
+.gt-bg-gradient {
+    background: var(--gt-gradient-primary);
+}
+
+.gt-text-gradient {
+    background: var(--gt-gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.gt-border-gradient {
+    border: 2px solid transparent;
+    background: linear-gradient(var(--gt-gray-900), var(--gt-gray-900)) padding-box,
+                var(--gt-gradient-primary) border-box;
+}
+
+.gt-shadow-glow {
+    box-shadow: var(--gt-shadow-glow);
+}
+
+/* 5. BUTTONS */
+.gt-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: var(--gt-semibold);
+    font-size: var(--gt-text-base);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--gt-font-sans);
+}
+
+.gt-button-primary {
+    background: var(--gt-gradient-primary);
+    color: white;
+}
+
+.gt-button-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--gt-shadow-lg), var(--gt-shadow-glow);
+}
+
+.gt-button-secondary {
+    background: var(--gt-gray-100);
+    color: var(--gt-gray-700);
+    border: 1px solid var(--gt-gray-200);
+}
+
+.gt-button-secondary:hover {
+    background: var(--gt-gray-200);
+    transform: translateY(-1px);
+}
